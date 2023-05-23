@@ -1,0 +1,118 @@
+.propertyList {
+    float: left;
+    width: 100%;
+    margin: 0 0 20px;
+    .property-featured {
+        width: 40%;
+        margin: 0;
+        display: table-cell;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-border-radius: 4px 0 0 4px;
+        border-radius: 4px 0 0 4px;
+        position: relative;
+        overflow: hidden;
+        text-align: left;
+        .content-thumb {
+            min-height: 175px;
+            display: block;
+            position: relative;
+            img {
+                width: 100%;
+                height: auto;
+                -webkit-border-radius: 4px 0 0 4px;
+                border-radius: 4px 0 0 4px;
+            }
+        }
+        .property-label {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            padding: 6px 12px;
+            line-height: 1;
+            color: #fff;
+            text-transform: uppercase;
+            background: #000;
+            font-weight: 500;
+            z-index: 10;
+            font-size: 15px;
+            border-radius: 2px;
+        }
+        .property-category {
+            position: absolute;
+            left: 15px;
+            bottom: 15px;
+            background: rgba(255,255,255,.85);
+            padding: 0 15px;
+            -webkit-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            font-size: 13px;
+            text-transform: uppercase;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            visibility: hidden;
+            z-index: 10;
+        }
+        &:hover{
+            .property-category {
+                opacity: 1;
+                filter: alpha(opacity=1 );
+                visibility: visible;
+            }
+        }
+    }
+    .property-wrap {
+        width: 60%;
+        display: table-cell;
+        vertical-align: top;
+        position: inherit;
+        background: #f9f9f9;
+        -webkit-border-radius: 0 0 4px 4px;
+        border-radius: 0 0 4px 4px;
+        position: relative;
+        text-align: left;
+        .property-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+            padding: 15px 25px 0;
+            a{
+                color: #000;
+                text-decoration: none;
+                &:hover{
+                    color: #21536f; 
+                }
+            }
+        }
+        .propertyDescription {
+            padding: 15px 25px 0;
+        }
+        .propertySummary {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            .summaryDetails {
+                background: #f9f9f9;
+                border-top: 1px solid #e5e5e5;
+                border-bottom: 1px solid #e5e5e5;
+                display: table;
+                width: 100%;
+                &>div {
+                    width: 33.33%;
+                    display: table-cell;
+                    height: 100%;
+                    vertical-align: middle;
+                    text-align: center;
+                    padding: 14px 8px;
+                    border-left: 1px solid #e5e5e5;
+                }
+                .propertyIcon img {
+                    height: 20px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

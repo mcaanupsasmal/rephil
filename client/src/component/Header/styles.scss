@@ -1,0 +1,130 @@
+.navbar-brand{
+  padding: 4px 0 6px; 
+  margin: 0;
+  img{
+    height: 45px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+  }
+}
+.rightNav{
+  width: 100%;
+  justify-content: flex-end;
+  border-right: 1px solid #7b9baf;
+  li{
+    a{
+      &.nav-link{
+        padding-top: 16px;
+        padding-bottom: 15px;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        color: #fff;
+        &.active{
+          background: #11242f;
+          color: #fff;
+        }
+        &.dropdown-toggle::after{
+          content: "";
+          border: solid #fff;
+          border-width: 0 2px 2px 0;
+          display: inline-block;
+          padding: 3px;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          margin: -2px;
+          margin-left: 8px;
+        }
+      }
+    }
+    ul{
+      &.dropdown-menu{
+        padding: 0;
+        border-radius: 0;
+        background: rgba(000,000,000,0.7);
+        li{
+          a{
+            padding-top: 6px; 
+            padding-bottom: 6px;
+            color: #fff;
+            font-size: 14px;
+            &.dropdown-item{
+              &:hover{
+                color: #11242f;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+nav{
+  &.navbar{
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgba(28,57,74,0.70) !important;
+    padding: 0;
+  }
+}
+.navbar-toggler{
+  border: 0px solid;
+  :focus{
+    box-shadow: none;
+  }
+  span{
+    filter: brightness(0) invert(1);
+  }
+}
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+.userIcon{
+  padding-left: 10px;
+  img{
+    width: 40px;
+    filter: brightness(0) invert(1);
+  }
+}
+@media screen and (max-width: 767px){
+  .headerInner nav.navbar{
+    padding-bottom: 15px;
+  }
+  .rightNav{
+    margin-top: 10px;
+    border-right: 0px solid;
+    li{
+      &.nav-item{
+        border-bottom: 1px solid #5989a4;
+      }
+      ul.dropdown-menu {
+        padding-bottom: 8px;
+        background: #2b6889;
+        border: 0px solid;
+      }
+    }
+    li a.nav-link{
+      text-align: left;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      &.dropdown-toggle::after{
+        position: absolute;
+        top: 20px;
+        right: 15px;
+      }
+    }
+  }
+  .callPh{
+    justify-content: flex-start;
+  }
+  .userIcon{
+    float: left;
+    padding: 0;
+    width: calc(100% - 200px);
+    img{
+      float: left;
+    }
+  }
+}
